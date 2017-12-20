@@ -1,0 +1,485 @@
+body {
+    font-family: "Roboto Light","Roboto Medium";
+	font-size: 16px;
+	margin: 0;
+	width: 100%;
+	overflow-x: hidden;
+	color: #fff;
+}
+.wrapper {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    border: solid 1px #c8c8ce;
+    border-radius: 2px;
+}
+
+.header {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+}
+/*Facebook Web View*/
+.facebook{
+    padding-right: 0px;
+}
+.facebook-wrapper{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.facebook-name{
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #3c5a9a;
+	border: none;
+}
+.facebook-addon{
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #2d4781;
+	float:left;
+}
+.facebook-addon img{
+    margin: auto;
+}
+
+/*Facebook Mobile View*/
+.facebook-mobile{
+    background-color: #3c5a9a;
+    padding-left: 0px;
+    border-radius: 2px;
+}
+.facebook-mobile-name{
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #3c5a9a;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    font-size: 16px;
+}
+.facebook-mobile-addon{
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    color: #fff;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: #2d4781;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+}
+
+.social{
+    padding-top: 20px;
+}
+
+.google-wrapper{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.google-name{
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #d03926;
+	border: none;
+}
+.google-addon{
+    height: 40px;
+    line-height: 40px;
+    width: 40px;
+    color: #fff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #b32d1c;
+    padding-left: 10px;
+    padding-right: 0px;
+}
+.google-addon img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*Google Mobile View*/
+.google-mobile{
+    margin-top: 15px;
+    background-color: #d03926;
+    padding-left: 0px;
+    border-radius: 2px;
+}
+.google-mobile-name{
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background-color: #d03926;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    font-size: 16px;
+}
+.google-mobile-addon{
+    height: 50px;
+    line-height: 50px;
+    width: 50px;
+    color: #fff;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    background-color: #b32d1c;
+    padding-left: 10px;
+    padding-right: 0px;
+    position: relative;
+    min-height: 1px;
+    float: left;
+}
+.content-mobile{
+    margin-top: 50px;
+}
+
+.mobile-addon{
+    background-color: #ffffff !important;
+    border-top-left-radius: 2px !important;
+    border-bottom-left-radius: 2px !important;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
+    border: solid 1px #c4c4c4 !important;
+}
+.mobile-input{
+    border-top-right-radius: 2px !important;
+    border-bottom-right-radius: 2px !important;
+    border-top-left-radius: 0px !important;
+    border-bottom-left-radius: 0px !important;
+    border: solid 1px #c4c4c4 !important;
+}
+.forgot-mobile{
+    text-align: right;
+    color: #55c171;
+    font-weight: bold;
+    padding: 3px 0px 0px 0px !important;
+
+}
+.remember-mobile{
+    padding: 0px !important;
+}
+.remember-pass{
+    padding-top: 10px;
+    color: #019528;
+    font-family: "Roboto Regular";
+}
+.password{
+    margin-top: 15px;
+}
+.content {
+    margin-top: 15px;
+}
+
+.form-input {
+    margin-bottom: 1px;
+}
+.form-input input, .form-input select {
+    background-color: #eeeeee;
+    border-top: solid 1px #ababab;
+    border-bottom: solid 0px #ababab;
+    border-left: solid 0px #d1d1d1;
+    border-right: solid 1px #d1d1d1;
+    height: 40px;
+    color: #585858;
+}
+.addText{
+    background-color: #eee;
+    padding-top: 10px;
+    border-top: solid 1px #ababab;
+    border-bottom: solid 0px #ababab;
+    border-left: solid 0px #d1d1d1;
+    border-right: solid 1px #d1d1d1;
+    height: 40px;
+    color: #585858;
+}
+.form-input:first-child input {
+    border-top-right-radius: 2px !important;
+}
+.form-input:first-child .input-group-addon{
+    border-top-left-radius: 2px !important;
+}
+.last_addon{
+    border-bottom-left-radius: 2px !important;
+    border-bottom: solid 1px #ababab !important;
+}
+
+::-webkit-input-placeholder {
+    color: #999;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: #999;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: #999;
+}
+
+:-ms-input-placeholder {
+    color: #999;
+}
+
+.form-input .input-group-addon {
+    border-radius: 0px;
+    background-color: #c2c2c2;
+    border-top: solid 1px #ababab;
+    border-bottom: solid 0px #ababab;
+    border-left: solid 1px #bbbbbb;
+    border-right: solid 0px #d1d1d1;
+}
+
+.site-info {
+    margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: middle;
+    font-family: "Roboto Regular";
+    font-weight: bold;
+}
+
+.forgot-password {
+    text-align: right;
+}
+
+.bottom-wrapper {
+    color: #1f499c;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-family: "Roboto Regular";
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.bottom-wrapper a {
+    color: #1f499c;
+    font-family: "Roboto Regular";
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.bottom-wrapper img {
+    margin-bottom: 2px;
+}
+
+.form-action {
+    margin-top: 7px;
+}
+#site_button{
+    background-color: #019828;
+    height: 40px;
+}
+.validation-error{
+    color: #ff0000;
+    background-color: #eeeeee;
+    border-bottom: solid 1px #ababab;
+    border-right: solid 1px #d1d1d1;
+}
+  
+
+@media (max-width: 340px) {
+    .sign-in, .forgot-password, .remember-pass, .remember-mobile, .forgot-mobile, .facebook-name-mini,
+    .google-name-mini{
+        font-size: 13px;
+    }
+    .wrapper{
+        margin-top: 10px;
+        padding-left: -15px;
+        padding-right: -15px;
+    }
+    .forgot-password{
+        padding-left: 0px;
+    }
+	.menu-nav {
+		float: none;
+	}
+}
+@media (max-width: 768px){
+	.menu-nav {
+		float: none;
+	}
+    .facebook-name-mini{
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-color: #3c5a9a;
+        position: relative;
+        min-height: 1px;
+        float: left;
+		border:none;
+    }
+    .facebook{
+        padding-right: 2px;
+    }
+    .google{
+        padding-left: 2px;
+    }
+    .facebook-addon{
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        color: #fff;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        background-color: #2d4781;
+        position: relative;
+        min-height: 1px;
+        float: left;
+    }
+    .facebook-wrapper{
+        background-color: #3c5a9a;
+        padding-left: 0px;
+        border-radius: 2px;
+    }
+
+    .google-wrapper{
+        background-color: #d03926;
+        padding-left: 0px;
+        border-radius: 2px;
+    }
+    .google-name-mini{
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+        background-color: #d03926;
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        float: left;
+		border:none;
+    }
+    .google-addon{
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        color: #fff;
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+        background-color: #b32d1c;
+        padding-left: 10px;
+        padding-right: 0px;
+        position: relative;
+        min-height: 1px;
+        float: left;
+    }
+}
+
+.login_method
+{
+	width: 50%;
+	margin: 0 auto;
+	padding-bottom: 55px;
+}
+
+/* add by phongwm */
+.google-bg {
+  background-image: url(../../images/login/g.png);
+  background-repeat: no-repeat;
+  background-position: 16px 9px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.facebook-bg {
+  background-image: url(../../images/login/F.png);
+  background-repeat: no-repeat;
+  background-position: 20px 7px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+@media (max-width: 340px) {
+    .facebook-name-mini, .google-name-mini{
+		padding:0;
+		margin: 0;
+		-webkit-padding-start:0;
+		-webkit-padding-before:0;
+		-webkit-padding-end:0;
+		-webkit-padding-after:0;
+		-webkit-margin-before:0;
+		-webkit-margin-end:0;
+		-webkit-margin-after:0;
+		-webkit-margin-start:0;
+    }
+	.dksd_login{
+		font-size:13px;
+	}
+	
+}
+.remember-pass-text{
+	  float: left;
+	  cursor: pointer;
+	  line-height: 21px;
+}
+
+.form_active_email{
+	margin-left: 20px;
+    margin-right: 20px;
+}
+.bluecolor{
+	color:#407CB0;
+}
+
+.hotline{
+	line-height:95px;
+}
+
+.navbar{
+	margin-bottom: 0;
+}
+
+.f-page{
+	height:225px;
+}
+
+.banner-page img {
+	width: 100%;
+	height: 100%;
+}
+
+.f-page img {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+@media (min-width: 768px) {
+	.menu-nav {
+		float: right !important;
+	}
+}
+
+
+	

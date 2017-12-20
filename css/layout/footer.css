@@ -1,0 +1,16 @@
+.footer{
+    position: absolute;
+    width: 100%;
+    background: #f0f0f0;
+}
+#banners{
+    padding-bottom: 15px;
+}
+.nbs-flexisel-nav-right, .nbs-flexisel-nav-left{
+    top: 20px !important;
+}
+.footer-title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #e8e8e8;
+}

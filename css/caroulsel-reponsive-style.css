@@ -1,0 +1,133 @@
+.clearout {
+height:20px;
+clear:both;
+}
+
+#flexiselDemo1, #flexiselDemo2, #flexiselDemo3 {
+display:none;
+padding-left: 120px
+}
+
+.nbs-flexisel-container {
+    position:relative;
+    max-width:100%;
+}
+.nbs-flexisel-ul {
+    position:relative;
+    width:9999px;
+    margin:0px;
+    padding:0px;
+    list-style-type:none;   
+    text-align:center;  
+}
+
+.nbs-flexisel-inner {
+    overflow:hidden;
+    float:left;
+    width:100%;
+}
+
+.nbs-flexisel-item {
+    float:left;
+    margin:0px;
+    padding:0px;
+    cursor:pointer;
+    position:relative;
+    line-height:0px;
+}
+.nbs-flexisel-item img {
+    width: 100%;
+    cursor: pointer;
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width:100px;
+    max-height:45px;
+}
+
+/*** Navigation ***/
+
+.nbs-flexisel-nav-left,
+.nbs-flexisel-nav-right {
+    width: 22px;
+    height: 22px; 
+    position: absolute;
+    cursor: pointer;
+    z-index: 100;
+    opacity: 0.5;
+}
+
+.nbs-flexisel-nav-left {
+    left: -17px;
+    background: url(../images/button-previous.png) no-repeat;
+}
+
+.nbs-flexisel-nav-right {
+    right: -48px;
+    background: url(../images/button-next.png) no-repeat;
+}
+
+/* add by phongwm */
+.logo_dksd{
+	width:100%;
+}
+.img_dksd_logo{
+	width: 23%;
+	margin-top: 0;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
+	vertical-align: middle;
+	display: block;
+}
+.title_dksd{
+	text-align:center;
+}
+.btn-access{
+	background-color: #019828;
+	color: #ffffff;
+}
+.btn-default{
+	color:#ffffff;
+	background-color:#9B9B9B;
+}
+.btn-access:hover{
+	color:#ffffff;
+}
+.dksd_login{
+	font-family: Arial;
+	padding-top: 10px;
+	color: #019528;
+	font-family: Arial;
+}
+
+.DKSD{
+	background-color: #fff;
+	height:auto;
+}
+
+.dksd_register{
+	height: auto; 
+	line-height: 34px;
+	font-family: Arial;
+	margin-top: 12px;
+}
+@media (max-width: 340px) {
+	.dksd_register{
+		height: auto; 
+		line-height: 47px;
+		font-size:12px;
+		white-space: nowrap;
+	}
+	.dksd-display-loginid {
+	  width: 85%;
+	}
+}
+.span_dksd{
+	float:left; 
+	margin-right: 20px;
+	cursor: pointer;
+	line-height: 21px;
+	color: black;
+}
+/*  end add by phongwm */

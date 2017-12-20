@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME| !-d
+
+RewriteCond $1 !^(index\.php|timthumb\.php|crossdomain\.xml|fonts|media|audio|images|css|js|resources|robots\.txt|.*\.css|assets)
+
+RewriteRule ^(.*)$ /index.php/$1 [L]

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MegaV <?php if (isset($data['title']) && $data['title'] != '') echo "- " . $data['title']; ?></title>
+    <link rel="shortcut icon" type="image/png" href="<?php echo base_url().'../images/megaid-favicon.png' ?>"/>
+    <link href="<?php echo base_url() . '../css/bootstrap/bootstrap.min.css' ?>" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href='<?php echo base_url() . "css/layout/layout_register_combined.css"; ?>'/>
+	<link rel="stylesheet" type="text/css" href='<?php echo base_url() . "css/layout/layout_info.css"; ?>'/>
+    <link rel="stylesheet" type="text/css" href="../css/layout/footer.css"/>
+    <link rel="stylesheet" type="text/css" href='<?php echo base_url() . "css/caroulsel-reponsive-style.css"; ?>'/>
+    <!--[if IE]>
+    <link rel="stylesheet" type="text/css" href="../css/layout/ie.css"/>
+    <![endif]-->
+
+    <script type="text/javascript" language="javascript" src='<?php echo base_url() . "assets/js/libs/jquery-1.11.3.min.js"; ?>'></script>
+    <script type="text/javascript" language="javascript" src='<?php echo base_url() . "../js/bootstrap/bootstrap.min.js" ?>'></script>
+    <script type="text/javascript" language="javascript" src='<?php echo base_url() . "../js/jquery.flexisel.js" ?>'></script>
+    <script type="text/javascript" language="javascript" src='<?php echo base_url() . "../js/login/login.js" ?>'></script>
+	<script type="text/javascript" language="javascript" src='<?php echo base_url() . "assets/js/elements/script.js"; ?>'></script>
+</head>
+<body>
+	<div class="container-fluid wrapper fast_register">
+		<!--img src="../../../images/info/logo.png" class="img-responsive header hidden-xs"-->
+
+		<div class="site-info hidden-xs">
+			<center>ĐĂNG KÝ TÀI KHOẢN MEGAV.VN</center>
+		</div>
+		<div class="row content">
+		<?php if(!isset($send_otp)): ?>
+			<?php echo form_open('register/do_register', array('method' => 'post', 'name' => 'register', 'id' => 'register', 'class' => 'form-horizontal frm-register')); ?>
+				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 form-input">
+					<div class="input-group col-md-12 col-lg-12 col-xs-12 col-sm-12 <?php echo form_error('fone')?'error':'' ?>">
+								<span class="input-group-addon"><img src="<?php echo base_url() . 'images/register/phone.png' ?>"/></span>
+						<input type="tel" name="fone" class="col-md-12 col-lg-12 col-xs-12 col-sm-12 android-fix"
+							   placeholder="Số điện thoại" value="<?php echo set_value('fone') ?>"/>
+						<span class="col-md-12 col-lg-12 col-xs-12 col-sm-12 validation_error" style="color: red"
+								id="fone_error"><?php echo (isset($error_fone)) ? $error_fone : ''; ?> <?php if(form_error('fone')) echo form_error('fone'); ?></span>
+						
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 form-input">
+					<div class="input-group col-md-12 col-lg-12 col-xs-12 col-sm-12 <?php echo form_error('password')?'error':'' ?>">
+						<span class="input-group-addon"><img src=<?php echo base_url(). '/images/register/pass.png'?> /></span>
+						<input type="password" name="password" class="col-md-12 col-lg-12 col-xs-12 col-sm-12" placeholder="Mật khẩu (*)"
+							   value="<?php echo set_value('password') ?>" maxlength="20"/>
+						<?php if(form_error('password')): ?>
+							<span class="col-md-12 col-lg-12 col-xs-12 col-sm-12 validation_error" style="color: red"
+								  id="fone_error"> <?php echo form_error('password'); ?></span>
+						<?php endif; ?>
+					</div>
+				</div>
+				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 form-input">
+					<div class="input-group col-md-12 col-lg-12 col-xs-12 col-sm-12 <?php echo form_error('re_password')?'error':'' ?>">
+						<span class="input-group-addon"><img src=<?php echo base_url(). '/images/register/pass.png'?> /></span>
+						<input type="password" name="re_password" class="col-md-12 col-lg-12 col-xs-12 col-sm-12" placeholder="Nhập lại mật khẩu (*)"
+							   value="<?php echo set_value('re_password') ?>" maxlength="20"/>
+						<?php if(form_error('re_password')): ?>
+							<span class="col-md-12 col-lg-12 col-xs-12 col-sm-12 validation_error" style="color: red"
+								  id="fone_error"> <?php echo form_error('re_password'); ?></span>
+						<?php endif; ?>
+					</div>
+				</div>
+				
+				
+				
+				
+					<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12" style="margin-top: 15px">
+						<script src='https://www.google.com/recaptcha/api.js'></script>
+						<div style="width: 304px; float: right; <?php if(isset($error_capcha) && $error_capcha == 1) echo "border: 1px solid red;" ?>">
+							<div class="g-recaptcha" data-sitekey="<?php echo API_GOOGLE_RECAPTCHA_PUBLIC; ?>" ></div>
+						</div>
+					</div>
+				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 form-action">
+					<div class="input-group col-md-12 col-lg-12 col-xs-12 col-sm-12">
+						<input class="col-md-12 col-lg-12 col-xs-12 col-sm-12 btn btn-warning" id="site_button" type="submit" value="Đăng ký" />
+					</div>
+				</div>
+			</form>
+			<?php else: ?>
+			 <?php echo form_open('register/confirm_register', array('method' => 'post', 'name' => 'register', 'id' => 'register', 'class' => 'form-horizontal frm-register')); ?>
+				<div>
+					<span>Chúng tôi đã gửi mã kích hoạt vào số điện thoại đăng ký của bạn. Vui lòng nhập vào đây để hoàn tất đăng ký với MegaV.vn. Không nhận được mã vui lòng <a id="resendOtp">gửi lại mã kích hoạt</a></span>
+				</div>
+				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 form-input">
+					<div class="input-group col-md-12 col-lg-12 col-xs-12 col-sm-12 <?php echo form_error('otp_code')?'error':'' ?>">
+						<span class="input-group-addon"><img src=<?php echo base_url(). '/images/register/pass.png'?> /></span>
+						<input type="password" name="otp_code" class="col-md-12 col-lg-12 col-xs-12 col-sm-12" placeholder="Nhập mã OTP"
+							   value=""/>
+						<?php if(form_error('otp_code')): ?>
+							<span class="col-md-12 col-lg-12 col-xs-12 col-sm-12 validation_error" style="color: red"
+								  id="fone_error"> <?php echo form_error('otp_code'); ?></span>
+						<?php endif; ?>
+					</div>
+					
+					<span class="col-md-12 col-lg-12 col-xs-12 col-sm-12 validation_error" style="color: red">
+						<?php if(isset($err_mess) && !empty($err_mess)) echo $err_mess; ?>
+					</span>
+				</div>
+				<div class="col-md-12 col-lg-12 col-xs-12 col-sm-12 form-action">
+					<div class="input-group col-md-12 col-lg-12 col-xs-12 col-sm-12">
+						<input class="col-md-12 col-lg-12 col-xs-12 col-sm-12 btn btn-warning" id="site_button" type="submit" value="Hoàn Thành" />
+					</div>
+				</div>
+			</form>
+			<?php endif; ?>
+		
+		</div>
+
+
+		<div class="row bottom-wrapper">
+			<div class="signin col-md-6 col-lg-6 col-xs-6 col-sm-6">
+				<img src="../../images/register/signin.png" />
+				<a href="<?php echo base_url().'login'?>">Đăng nhập</a>
+			</div>
+			<div class="forgot-password col-md-6 col-lg-6 col-xs-6 col-sm-6">
+				<img src="../../images/register/forgot-pass.png" />
+				<a href="<?php echo base_url() . 'reset_password' ?>">Quên mật khẩu</a>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<div class="row footer hidden-xs" style="background: #f0f0f0;">
+			<div class="container footer-title" style="text-align: center">
+				Chỉ cần một tài khoản bạn có thể đăng ký tất cả các dịch vụ của VNPT EPAY
+			</div>
+			<div class="hidden-xs">
+				<div id="banners" class="container">
+					<div class="col-lg-12 col-md-12 col-sm-12">
+						<?php $this->load->view('footer/scoll_images') ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="hidden-md hidden-sm hidden-lg" style="height: 200px">
+
+	</div>
+
+	<div id="loader-bg" style="display:none">
+		<img class="loading" src="../../../images/ajax_loader_blue_64.gif">
+	</div>
+	
+	
+</body>
+</html>
+</code>

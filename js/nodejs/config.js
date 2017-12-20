@@ -1,0 +1,2 @@
+var link_admin_request_detail = location.protocol+'//'+location.hostname+(location.port ? ':'+location.port: '')+'/handle_requests/manage/detail';
+var address_server_nodejs = 'http://172.16.10.160:5008';

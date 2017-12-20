@@ -1,0 +1,283 @@
+$(document).ready(function(){
+	/*
+	$(".acc-item-info").click(function(e) {
+		e.preventDefault();
+		
+        $.post( "/user_info", {},
+			function(data, status) {
+				if(status == 'success'){
+					
+					$(".lg-content").html(data);
+					$("#mg-content").toggleClass("toggled");
+					$('.close').css('display', 'block');
+				}
+		});
+    });
+	*/
+	var height = $( window ).height();
+	
+	$(".acc-item-info").click(function(e) {
+		e.preventDefault();
+        var htmldata = '<iframe id="IframeId-info" src="/user_info" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'user_info', {expires : 7, path:'/'});
+		//$.removeCookie("page");
+    });
+	
+	$(".acc-item-pass").click(function(e) {
+		e.preventDefault();
+		var htmldata = '<iframe id="IframeId-info" src="/change_pass" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'change_pass', {expires : 7, path:'/'});
+    });
+	
+	$(".acc-item-pass-lv2").click(function(e) {
+		e.preventDefault();
+		var htmldata = '<iframe id="IframeId-info" src="/change_pass_lv2" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'change_pass_lv2', {expires : 7, path:'/'});
+    });
+	
+	$(".acc-item-email").click(function(e) {
+		e.preventDefault();
+		var htmldata = '<iframe id="IframeId-info" src="/change_email" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'change_email', {expires : 7, path:'/'});
+    });
+	
+	$(".acc-item-phone").click(function(e) {
+		e.preventDefault();
+		var htmldata = '<iframe id="IframeId-info" src="/change_phone" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'change_phone', {expires : 7, path:'/'});
+    });
+	
+	$(".acc-item-check").click(function(e) {
+		e.preventDefault();
+		var htmldata = '<iframe id="IframeId-info" src="/change_security" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'change_security', {expires : 7, path:'/'});
+    });
+	
+
+	$(".trans-item-payment").click(function(e) {
+		e.preventDefault();
+		var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		$.cookie('slideContent', 'payment_epurse', {expires : 7, path:'/'});
+    });
+    $('body,html').on('click','.trans-item-payment-sidebar',function(e){
+    	e.preventDefault();
+    	$("#mg-content").removeClass("toggled");
+		
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} else {
+			var slideContent = $.cookie('slideContent');
+			//alert(slideContent);
+			if(slideContent != 'payment_epurse') {
+				$(".lg-content").html();
+				var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+				$(".lg-content").html(htmldata);
+				$.cookie('slideContent', 'payment_epurse', {expires : 7, path:'/'});
+			}
+		}
+    });
+	$(".trans-item-withdraw").click(function(e) {
+		e.preventDefault();
+		//var htmldata = '<iframe id="IframeId-info" src="/withdraw" style="height:' + height + 'px"></iframe>';
+		//$(".lg-content").html(htmldata);
+		//$("#mg-content").toggleClass("toggled");
+		//$('.close').css('display', 'block');
+    });
+	$(".trans-item-withdraw-sidebar").click(function(e) {
+		e.preventDefault();
+		/*
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/withdraw" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} */
+    });
+	
+	$(".trans-item-transfer").click(function(e) {
+		e.preventDefault();
+		
+		$.ajax({
+			  url: "/transfer/index",
+			  dataType : 'json'
+			}).done(function(data) {
+			console.log(data);
+			  $(".lg-content").html(data.html);
+			  $("#mg-content").toggleClass("toggled");
+				$('.close').css('display', 'block');
+			});
+		/*
+		var htmldata = '<iframe id="IframeId-info" src="/transfer" style="height:' + height + 'px"></iframe>';
+		$(".lg-content").html(htmldata);
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'block');
+		*/
+    });
+	$('body').on('click','#transfer',function(e){
+		
+		$.ajax({
+			url: "/transfer/transfer_epurse",
+			dataType : 'json'
+		}).done(function(data) {
+			$(".lg-content").html();
+			$(".lg-content").html(data.html);
+			//$("#mg-content").toggleClass("toggled");
+			//$('.close').css('display', 'block');
+		});
+	});
+	
+	$(".trans-item-transfer-sidebar").click(function(e) {
+		e.preventDefault();
+		
+		if(!$("#mg-content").hasClass("toggled")) {
+			
+			$.ajax({
+			  url: "/transfer/index"
+			}).done(function(data) {
+			console.log(data);
+			  $(".lg-content").html(data.html);
+			});
+			
+			/*
+			var htmldata = '<iframe id="IframeId-info" src="/transfer" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+			*/
+		} else {
+			var slideContent = $.cookie('slideContent');
+			//alert(slideContent);
+			if(slideContent != 'payment_epurse') {
+				$(".lg-content").html();
+				var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+				$(".lg-content").html(htmldata);
+				$.cookie('slideContent', 'payment_epurse', {expires : 7, path:'/'});
+			}
+		}
+    });
+	
+	$(".trans-item-bank-map").click(function(e) {
+		e.preventDefault();
+		//var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+		//$(".lg-content").html(htmldata);
+		//$("#mg-content").toggleClass("toggled");
+		//$('.close').css('display', 'block');
+    });
+	$(".trans-item-bank-map-sidebar").click(function(e) {
+		e.preventDefault();
+		/*
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} */
+    });
+	
+	$(".trans-item-payment-mobile").click(function(e) {
+		e.preventDefault();
+		//var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+		//$(".lg-content").html(htmldata);
+		//$("#mg-content").toggleClass("toggled");
+		//$('.close').css('display', 'block');
+    });
+	$(".trans-item-payment-mobile-sidebar").click(function(e) {
+		e.preventDefault();
+		/*
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} */
+    });
+	
+	$(".trans-item-payment-game").click(function(e) {
+		e.preventDefault();
+		//var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+		//$(".lg-content").html(htmldata);
+		//$("#mg-content").toggleClass("toggled");
+		//$('.close').css('display', 'block');
+    });
+	$(".trans-item-payment-game-sidebar").click(function(e) {
+		e.preventDefault();
+		/*
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} */
+    });
+	
+	$(".trans-item-topup").click(function(e) {
+		//e.preventDefault();
+		//var htmldata = '<iframe id="IframeId-info" src="/buy_card" style="height:' + height + 'px"></iframe>';
+		//$(".lg-content").html(htmldata);
+		//$("#mg-content").toggleClass("toggled");
+		//$('.close').css('display', 'block');
+    });
+	
+	$(".trans-item-topup-sidebar").click(function(e) {
+		e.preventDefault();
+		/*
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/buy_card" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} */
+    });
+	
+	$(".trans-item-thanh-toan").click(function(e) {
+		e.preventDefault();
+		//var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+		//$(".lg-content").html(htmldata);
+		//$("#mg-content").toggleClass("toggled");
+		//$('.close').css('display', 'block');
+    });
+	$(".trans-item-thanh-toan-sidebar").click(function(e) {
+		e.preventDefault();
+		/*
+		if(!$("#mg-content").hasClass("toggled")) {
+			var htmldata = '<iframe id="IframeId-info" src="/payment_epurse" style="height:' + height + 'px"></iframe>';
+			$(".lg-content").html(htmldata);
+			$("#mg-content").toggleClass("toggled");
+			$('.close').css('display', 'block');
+		} */
+    });
+	
+	
+	$('.close').click(function(e) {
+		$(".lg-content").html('');
+		$("#mg-content").toggleClass("toggled");
+		$('.close').css('display', 'none');
+	});
+	
+		
+});
+

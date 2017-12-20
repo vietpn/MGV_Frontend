@@ -1,0 +1,401 @@
+html {
+    /*background-color: #eeeeee;*/
+}
+
+body {
+    background-color: #464646;
+    color: #3d3d3d;
+    font-family: "Roboto Light","Roboto Medium";
+	font-size: 16px;
+	
+    margin: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	body {
+		height: 100%;
+	}
+}
+@media screen and (min-width: 769px) {
+    .menu-nav {
+        float: right;
+    }
+}
+@media screen and (max-width: 768px) {
+    .menu-nav {
+        text-align: center;
+    }
+}
+
+
+.menu-nav-item{
+	background-color: #48b14a;
+    color: #333;
+    margin-left: 2px;
+    margin-right: 2px;
+	font-family: "Roboto Regular";
+	z-index: 1441;
+	font-size: 16px;
+}
+
+
+.menu-nav-item:hover{
+	background-color: #339e39;
+}
+
+.header-page {
+    padding: 15px;
+	position: relative;
+}
+
+.bg-login{
+	background-image: url("/../../images/bg-login.png");
+    background-position: left top;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}
+
+.content-login{
+	color: #222222;
+    display: table;
+    font-family: "Roboto Light";
+    font-size: 40px;
+    height: 100%;
+    position: relative;
+    width: 100%;
+}
+
+.content-login-middle{
+	display: table-cell;
+   /* vertical-align: middle; */
+}
+
+.content-login-inner{
+	margin-left: auto;
+    margin-right: auto; 
+	margin-top: 100px;
+}
+
+
+.logoMegaV{
+    position: relative;
+    width: 188px;
+	margin: 0 auto 80px;
+}
+
+.context-login{
+	font-family: "Roboto Light";
+    font-size: 16px;
+    position: relative;
+	color: #cccccc;
+	text-align: justify;
+}
+
+.form-login, .form-register{
+	background-color: #fff;
+    position: absolute;
+    right: 15px;
+    top: 0;
+    z-index: 16000009;
+	width: 330px;
+	font-family: "Roboto Light";
+	box-shadow: 0 1px 2px 0;
+	height: auto;
+}
+@media screen and (max-width:768px) {
+    .content-login-inner {
+        margin-top: 20px;
+    }
+    .logoMegaV {
+        width: 100px;
+        margin: 0 auto 30px;
+    }
+    .context-login {
+        font-size: 12px;
+    }
+}
+@media screen and (max-width:480px) {
+    .form-login, .form-register{
+        right: 0px;
+
+        width: 100%;
+    }
+}
+
+.hidden-fix-profile .user-balance,
+.hidden-fix-profile .user-name{
+        color: #fff;
+}
+.form-login > iframe {
+    background-color: #fff;
+    border: medium none;
+    width: 100%;
+	height: 100%;
+	float: left;
+}
+
+.form-register > iframe {
+    background-color: #fff;
+    border: medium none;
+    width: 100%;
+	float: left;
+}
+
+.navbar-header{
+	line-height:34px;
+	color: #fff;
+}
+
+.btn-login-register{
+	background-color: #48b14a;
+    border: medium none;
+	font-family: "Roboto Medium";
+	font-size:24px;
+	line-height: 46px;
+	color:#fff;
+	text-decoration: none;
+}
+
+.btn-login-register:hover{
+	background-color: #339e39;
+	color:#fff;
+}
+
+.btn-login-register:active{
+	text-decoration: none;
+	color:#fff;
+}
+
+.btn-login-register:focus{
+	text-decoration: none;
+	color:#fff;
+}
+
+.input-login{
+	border-color: currentcolor currentcolor #000;
+    border-style: none none solid;
+    border-width: 0 0 1px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.login-label{
+	font-family: "Roboto Light";
+	font-size: 16px;
+}
+
+.remember-pass{
+	margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+.remember-pass label{
+	font-weight: normal;
+}
+
+.fogot-pass {
+	margin-bottom: 30px;
+    margin-top: 10px;
+	text-align: right;
+}
+
+.fogot-pass a{
+	color: #cc1c1c;
+}
+
+.logoimages{
+	background-image: url("/../../images/logoMegaV.png");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    display: block;
+    height: 100px;
+    position: relative;
+    width: 120px;
+	margin: 30px auto 0;
+}
+
+.loginsuccess{
+	background-image: url("/../../images/success.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+}
+
+.loginfail{
+	background-image: url("/../../images/resulr-warning.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    display: block;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    width: 50%;
+}
+
+.result_a{
+	text-align: center;
+}
+
+.result_a:hover{
+	text-decoration: none;
+}
+
+.result_re{
+	text-align: center;
+	margin-top: 73px;
+	bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 100%;
+}
+
+.result_re:hover{
+	text-decoration: none;
+}
+
+.logo-user {
+    float: left;
+    margin-right: 15px;
+	height: 50px;
+}
+
+.header-info-user {
+    float: left;
+    margin-right: 15px;
+	color: #fff;
+}
+
+.user-name{
+	
+}
+
+.user-balance{
+	float: left;
+}
+
+.arrow{
+	background-image: url("/../../images/arrow-left.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    height: 79px;
+    position: absolute;
+    top: 50%;
+    width: 50px;
+	z-index: 999;
+}
+
+.arrow-left {
+    height: 100%;
+    position: absolute;
+    width: 10%;
+	top: 0;
+}
+
+.error{
+	color: #b94207;
+	font-size: 14px;
+}
+
+.validation-error{
+	padding: 0;
+}
+
+#loader-bg{
+	bottom: 0;
+	left: 0;
+	position: fixed;
+	right: 0;
+    top: 0;
+    z-index: 1038;
+	opacity: 0.5;
+	transition: opacity 0.15s linear 0s;
+}
+
+.lienhe span {
+    font-family: Roboto Regular;
+}
+
+
+    input::-moz-placeholder {
+		font-style: italic;
+    }
+    input:-moz-placeholder {
+		font-style: italic;
+    }
+  
+	input::-webkit-input-placeholder{
+		font-style: italic;
+	}
+	
+	::-moz-appearance: scrollbartrack-horizontal;
+
+    ::-moz-scrollbar {
+        width: 10px;
+        height: 6px;
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+        height: 6px;
+    }
+
+    ::-moz-scrollbar-button:start:decrement,
+    ::-moz-scrollbar-button:start:decrement {
+        height: 0px;
+        display: block;
+        background-color: black;
+    }
+    ::-webkit-scrollbar-button:start:decrement,
+    ::-webkit-scrollbar-button:end:increment {
+        height: 0px;
+        display: block;
+        background-color: transparent;
+    }
+    
+    ::-moz-scrollbar-track-piece {
+        background-color: transparent;          /*Global Track Peice(the slider noob.)*/
+        -webkit-border-radius: 6px;
+    }
+    ::-webkit-scrollbar-track-piece {
+        background-color: transparent;          /*Global Track Peice(the slider noob.)*/
+        -webkit-border-radius: 6px;
+    }
+
+    ::-moz-scrollbar-thumb:vertical {
+        height: 50px;
+        background-color: #666;            /* Up/Down slider background*/
+        -webkit-border-radius: 6px;
+    }    
+    ::-webkit-scrollbar-thumb:vertical {
+        height: 50px;
+        background-color: #666;            /* Up/Down slider background*/
+        -webkit-border-radius: 6px;
+    }
+
+    ::-moz-scrollbar-thumb:horizontal {
+        width: 50px;
+        background-color: #666;            /* Side/Side slider background*/
+        -webkit-border-radius: 3px;
+    }    
+    ::-webkit-scrollbar-thumb:horizontal {
+        width: 50px;
+        background-color: #666;            /* Side/Side slider background*/
+        -webkit-border-radius: 3px;
+	}
+	
+
+.regis-new-layout{
+    min-height: 410px!important;
+	}
+.frm-register a {
+    cursor: pointer;
+}
